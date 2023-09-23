@@ -1,56 +1,308 @@
+<!DOCTYPE html>
 <html>
- <head>
-  <title>This is the Title of...</title>
- </head>
- <body>
-  <h1>This is the Body of the Page</h1>
-  <p>Anything within the body of a web
-     page is displayed in the main
-     browser window.</p>
- </body>
-    </html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(255,0, 0, 0, 0.5), rgba(255,0, 0, 0, 0.5)), url("heroimage.jpg");
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: white;
+  background-color: ##FF0000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: white;
+  color: #FF0000;
+}
+
+    
+.topnav {
+  overflow: hidden;
+  background-color: #FF0000;
+}
+
+.topnav a {
+  float: left;
+  text-align: center;
+  color: white;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  justify-content: space-evenly;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: #FF0000;
+}
+    
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  background-color: black;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  color: white;
+  background-color: #222;
+}
+
+.about-section {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  padding: 5px 0px;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+    
+.experience{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 6px;
+}
+    
+.site{
+    background-color: black;
+    }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.concontainer {
+  border-radius: 5px;
+  background-color: #000000;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.concolumn {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.conrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #222;
+   color: white;
+   text-align: center;
+}
+    
+</style>
+</head>
+
+<body>
+
+
+<div class="topnav">
+  <a class="active" href="#about-me">About Me</a>
+  <a href="#Work Experience">Experience</a>
+  <a href="#contact">Contact</a>
+</div>
+
 
 <div class="hero-image">
   <div class="hero-text">
-    <h1>I am Ayush Bhanot</h1>
-    <p>And I'm a Student</p>
-    <button>Hire me</button>
+    <h1 style="font-size:100px;">Ayush Bhanot</h1>
+    <p style="font-size:22px;">NBA World Chamion, Pro E-Sports, and Proffessional Body-Builder.</p>
+    <button>Learn More</button>
   </div>
 </div>
-
-<div class="about-section">
-  <h1>About Us Page</h1>
-  <p>We help people reach their max potiential</p>
-  <p>Resize the browser window to see that this page is responsive by the way.</p>
+    
+<div class="about-section" id="about-me">
+  <h1>About Me</h1>
 </div>
 
-<h2 style="text-align:center">Our Team</h2>
-<div class="row">
+<div class="row" style="background-color: black;">
   <div class="column">
     <div class="card">
-      <img src="/w3images/team1.jpg" alt="Ayush" style="width:100%">
+      <img src="Colours.jpg" alt="Jane" style="width:100%">
       <div class="container">
-        <h2>Jane Doe</h2>
-        <p class="title">Him</p>
-        <p>D1 swimmer, 3 Times NBA World Champion
-        </p>
-        <p>abhanot4@uwo.ca</p>
-        <p><button class="button">Contact</button></p>
+        <h2>Favourite Colours</h2>
+          <ul>
+          <li class = "title">Green</li>
+          <li class = "title">Red</li>
+          <li class = "title">Blue</li>
+          </ul>
       </div>
     </div>
-    
   </div>
 
-    <div class="container">
-  <div style="text-align:center">
-    <h2>Contact Me</h2>
-    <p>Fill in the following if you are trying to get a hold of me: </p>
-  </div>
-  <div class="row">
-    <div class="column">
-      <img src="/w3images/map.jpg" style="width:100%">
+  <div class="column">
+    <div class="card">
+      <img src="Sports.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Favourite Sports to Watch</h2>
+          <ul>
+          <li class = "title">Swimming</li>
+          <li class = "title">Tennis</li>
+          <li class = "title">Golf</li>
+          </ul>
+      </div>
     </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="Marvel.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Favourite Marvel Movies</h2>
+        <ul>
+          <li class = "title">Black Panther</li>
+          <li class = "title">Spider-Man: No Way Home</li>
+          <li class = "title">Avengers 3</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="experience", id="Work Experience" style="padding-top: 50px;">
+    <h1>Work Experience</h1>
+    <h3> <span style="float: left;">NBA World Champion</span>
+        <span style="float: right;">Jan 2023</span>
+    </h3>
+    <br>
+
+<ul>
+    <p style="text-align: left; padding-bottom: 10px; color: #D1D1D1;">Represented Canada in the Olympics for Track and Field.
+</ul>
+    
+<h3> <span style="float: left;"> Body Building Mr. Olympia</span>
+        <span style="float: right;">August 2021</span>
+    </h3>
+    <br>
+
+<ul>
+    <p style="text-align: left; padding-bottom: 10px; color: #D1D1D1;">Within 2 extremely dedicated and determined day Ayush trained vigoroursly in order ot become an IFBB Pro Body Builder
+</ul>
+    <h3> <span style="float: left;"> D1 E-Sports Player</span>
+        <span style="float: right;">September 2016</span>
+    </h3>
+    <br>
+
+<ul>
+    <p style="text-align: left; padding-bottom: 10px; color: #D1D1D1;">Ayush was always extremely fond of online gaming until he took it to the next level and became a pro.
+</ul>
+    
+<div style="padding-bottom: 200px;">
+    
+</div>
+    
+<div class="concontainer", id="contact" style="padding-bottom: 50px;">
+  <div style="text-align:center">
+    <h1 style="color: white;">Contact Me</h2>
+    <p style="color: white;">If you would like to reach your true portential...</p>
+  </div>
+  <div class="conrow">
     <div class="column">
+      <img src="mail.png" style="width:100%">
+    </div>
+    <div class="concolumn">
       <form action="/action_page.php">
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -58,14 +310,21 @@
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
         <label for="country">Country</label>
         <select id="country" name="country">
-          <option value="india">India</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="USA">USA</option>
+          <option value="Other">Other</option>
         </select>
-        <label for="subject">Message:</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <label for="subject">Message</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
         <input type="submit" value="Submit">
       </form>
     </div>
   </div>
 </div>
+    
+<div class="footer">
+  <p>For more info call: +1 (519) 660-6950</p>
+</div>
+
+</body>
+</html>
